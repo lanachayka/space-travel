@@ -193,6 +193,21 @@ select {
   border: 0;
 }
 
+.skip-to-content {
+  position: absolute;
+  z-index: 9999;
+  background: hsl(var(--clr-white));
+  color: hsl(var(--clr-dark));
+  padding: 0.5em 1em;
+  margin-inline: auto;
+  transform: translateY(-100%);
+  transition: transform 250ms ease-in;
+}
+
+.skip-to-content:focus {
+  transform: translateY(0);
+}
+
 /* colors */
 .bg-dark {
   background-color: hsl(var(--clr-dark));
@@ -427,7 +442,7 @@ select {
     display: block;
     position: relative;
     height: 1px;
-    background: hsl(var(--clr-white)/.25);
+    background: hsl(var(--clr-white) / 0.25);
     width: 100%;
     order: 1;
     margin-right: -2.5rem;
