@@ -67,6 +67,8 @@ body {
   background-color: hsl(var(--clr-dark));
   line-height: 1.5;
   min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr;
 }
 
 /* Images */
@@ -118,6 +120,24 @@ select {
   padding-inline: 2em;
   margin-inline: auto;
   max-width: 80rem;
+}
+
+.grid-container {
+  display: grid;
+}
+
+@media (min-width: 45rem) {
+  .grid-container {
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
+  }
+  .grid-container > *:first-child {
+    grid-column: 2;
+  }
+
+  .grid-container > *:last-child {
+    grid-column: 3;
+  }
 }
 
 .sr-only {
@@ -233,7 +253,7 @@ select {
 
 .large-button {
   position: relative;
-  display: grid;
+  display: inline-grid;
   z-index: 1;
   place-content: center;
   padding: 0 2em;
@@ -308,13 +328,13 @@ select {
   aspect-ratio: 1;
   border-radius: 50%;
   border: 0;
-  padding: .5em;
-  background-color: hsl(var(--clr-white) / .25);
+  padding: 0.5em;
+  background-color: hsl(var(--clr-white) / 0.25);
 }
 
 .dot-indicators > *:hover,
 .dot-indicators > *:focus {
-  background-color: hsl(var(--clr-white) / .5);
+  background-color: hsl(var(--clr-white) / 0.5);
 }
 
 .dot-indicators > [aria-selected="true"] {
@@ -325,7 +345,7 @@ select {
   cursor: pointer;
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 0.1rem solid hsl(var(--clr-white) / .25);
+  border: 0.1rem solid hsl(var(--clr-white) / 0.25);
 }
 
 .number-indicators > *:hover,
@@ -336,5 +356,5 @@ select {
 .number-indicators > [aria-selected="true"] {
   background-color: hsl(var(--clr-white));
   border: 0;
-  color:hsl(var(--clr-dark));
+  color: hsl(var(--clr-dark));
 }
