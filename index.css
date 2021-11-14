@@ -289,6 +289,10 @@ select {
   border-color: hsl(var(--clr-white) / 0.5);
 }
 
+.underline-indicators > .active {
+  border-color: hsl(var(--clr-white) / 1);
+}
+
 .underline-indicators > [aria-selected="true"] {
   border-color: hsl(var(--clr-white) / 1);
   color: hsl(var(--clr-white));
