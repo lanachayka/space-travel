@@ -3,11 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <!-- Our custom CSS -->
+    <link rel="stylesheet" href="./index.css" />
   <title>Destination</title>
+  <script src="./index.js" defer></script>
 </head>
-<body>
+<body class="destination">
+  <a class="skip-to-content" href="#main">Skip to content</a>
+    <header class="primary-header flex">
+      <div>
+        <img src="assets/shared/logo.svg" alt="space tourism logo" class="logo"></img>
+      </div>
+      <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only">Menu</span></button>
+      <nav>
+        <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+          <li><a class="text-white ff-sans-cond uppercase letter-spacing-2 fs-300" href="index.html"><span aria-hidden="true">00</span>home</a></li>
+          <li class="active"><a class="text-white ff-sans-cond uppercase letter-spacing-2 fs-300" href="./destination.html"><span aria-hidden="true">01</span>destination</a></li>
+          <li><a class="text-white ff-sans-cond uppercase letter-spacing-2 fs-300" href="./crew.html"><span aria-hidden="true">02</span>crew</a></li>
+          <li><a class="text-white ff-sans-cond uppercase letter-spacing-2 fs-300" href="./technology.html"><span aria-hidden="true">03</span>technology</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main" class="grid-container grid-container--destination flow">
+      <h1 class="numbered-title"><span aria-hidden="true">01</span>Pick your destination</h1>
+      <img src="assets/destination/image-moon.png" alt="the moon">
+      <div class="tab-list underline-indicators flex">
+        <button aria-selected="true" class="text-accent ff-sans-cond uppercase letter-spacing-2 fs-300">moon</button>
+        <button aria-selected="false" class="text-accent ff-sans-cond uppercase letter-spacing-2 fs-300">mars</button>
+        <button aria-selected="false" class="text-accent ff-sans-cond uppercase letter-spacing-2 fs-300">europa</button>
+        <button aria-selected="false" class="text-accent ff-sans-cond uppercase letter-spacing-2 fs-300">titan</button>
+      </div>
+      <article class="destination-info">
+        <h2 class="fs-900 ff-serif uppercase">Moon</h2>
+        <p class="text-accent">See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+        regain perspective and come back refreshed. While you’re there, take in some history 
+        by visiting the Luna 2 and Apollo 11 landing sites.</p>
+        <div class="destination-meta flex">
+          <div>
+            <h3 class="text-accent ff-sans-cond uppercase letter-spacing-3 fs-200">Avg. Distance</h3>
+            <p class="ff-serif uppercase fs-500">384,400 km</p>
+          </div>
+          <div>
+            <h3 class="text-accent ff-sans-cond uppercase letter-spacing-3 fs-200">Est. travel time</h3>
+            <p class="ff-serif uppercase fs-500">3 days</p>
+          </div>
+        </div>
+      </article>
+    </main>
 </body>
 </html>
